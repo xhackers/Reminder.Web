@@ -5,14 +5,14 @@ namespace Reminder.Web.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Reminder.Web.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Reminder.Web.Models.DefaultConnectionContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(Reminder.Web.Models.ApplicationDbContext context)
+        protected override void Seed(Reminder.Web.Models.DefaultConnectionContext context)
         {
             //  This method will be called after migrating to the latest version.
 
